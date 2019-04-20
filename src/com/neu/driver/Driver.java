@@ -18,6 +18,9 @@ public class Driver {
 		Integer gen= 1;
 		Integer fitness = 0;
 		int BOARD_SIZE = FileIO.sudokuSize();
+		System.out.println("Original unsolved sudoku");
+		Helper.printBoard(new Individual().getSudoku());
+		System.out.println("\n\n\n");
 		List<Individual> individuals = ga.first_gen();
 		final long startTime = System.currentTimeMillis();
 		int mutation_onset = 20;
